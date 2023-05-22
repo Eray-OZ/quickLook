@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 
 namespace console
@@ -254,17 +254,150 @@ namespace console
 
 
 
+            // string s = new String('s', 3)  -> sss
 
 
-            
 
-          
-        
-        
-        
-    
-           
-                
+
+
+
+            // foreach
+
+
+            // string[] cars = {"BMW", "Ford", "Toyota", "Nissan"};
+
+
+            // foreach (var item in cars)
+            // {
+            //     Console.Write(item + " ");
+            // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            // Array
+
+
+            // string[] colors = new string[5];
+            // colors[0] = "Black";
+
+
+            // string[] pet = {"cat", "dog", "bird", "hamster"};
+
+            // int[] arr;
+            // arr = new int[3];
+            // arr[2] = 25;
+
+            // Console.WriteLine(colors[0] + "\n" + arr[1] + "\n" + pet[3]);
+
+
+
+
+
+
+
+
+
+
+            // int[] nums = {4, 1, 7, 2, 12, 11, 12, 13, 20, 5};
+
+            // Array.Sort(nums);
+
+            // Console.WriteLine("Sorted Array");
+            // foreach(var n in nums)
+            // {
+            //     Console.Write(n + ",");
+            // }
+
+
+
+
+            // Console.WriteLine("\n\n");
+
+
+
+
+            // Console.WriteLine("Cleared Array");
+
+            // Array.Clear(nums, 2, 2);                 // ikinci indeksten itibaren iki elemanı sildi
+
+            //  foreach(var n in nums)
+            // {
+            //     Console.Write(n + " ");
+            // }
+
+
+
+
+            // Console.WriteLine("\n\n");
+
+
+
+
+            // Console.WriteLine("Reversed Array");
+
+            // Array.Reverse(nums);
+
+            //  foreach(var n in nums)
+            // {
+            //     Console.Write(n + " ");
+            // }
+
+
+
+
+            // Console.WriteLine("\n\n");
+
+
+
+
+            // Console.WriteLine("Index Of Array");
+
+            // int ix = Array.IndexOf(nums, 20);
+
+            // Console.WriteLine("Index Of 20 is " + ix);
+
+
+
+
+            // Console.WriteLine("\n\n");
+
+
+
+
+            // Console.WriteLine("Resize");
+
+            // Array.Resize<int>(ref nums, 9);
+
+            //   foreach(var n in nums)
+            // {
+            //     Console.Write(n + " ");
+            // }
+
+
+
 
 
 
