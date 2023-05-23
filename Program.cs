@@ -1,11 +1,8 @@
 ﻿using System;
 
 
-namespace ptth
+namespace console
 {
-
-
-
 
 
 
@@ -15,57 +12,50 @@ namespace ptth
 
 
 
-
-
-
-
-
-
         static void Main(string[] args)
         {
 
 
 
-            string var = "We learn CSharp, Welcome!";
 
 
 
 
 
-            // Length
-            Console.WriteLine(var.Length + "\n");
 
 
-            // ToUpper, ToLower
-            Console.WriteLine(var.ToUpper() + " " + var.ToLower() + "\n");
+            // Implicit Conversion (Bilinçsiz)
 
 
 
 
+            // byte a = 5;
 
-            // Concat
-            Console.WriteLine(String.Concat(var, " Hello World") + "\n");
+            // sbyte b = 30;
 
+            // short c = 10;
 
+            // int d = a+b+c;       
 
 
+            // Console.WriteLine("d:"+d);
 
 
-            // Compare, CompareTo
-            Console.WriteLine(var.CompareTo("Hello World") + "\n");  // length var > length Hello World
+            // long h = d;     
 
-            Console.WriteLine(String.Compare(var, "Hello World", true) + "\n"); // true ise karşılaştırmada büyük küçük harf göz ardı edilir
+            // float i = h;
 
+            // Console.WriteLine("i:"+i);
 
 
 
+            // string e = "zikriye";
 
+            // char f = 'k';
 
-            // Contains
-            Console.WriteLine(var.Contains("CSharp"));
-            Console.WriteLine(var.EndsWith("qst"));
-            Console.WriteLine(var.StartsWith("We") + "\n");
+            // object g = e +f+d;
 
+            // Console.WriteLine("g:"+g);
 
 
 
@@ -73,9 +63,6 @@ namespace ptth
 
 
 
-            // IndexOf
-            Console.WriteLine(var.IndexOf("CSharp"));   // Starts at 9
-            Console.WriteLine(var.LastIndexOf("p") + "\n"); // Last p at 14
 
 
 
@@ -84,31 +71,32 @@ namespace ptth
 
 
 
-            // Insert
-            Console.WriteLine(var.Insert(0, "Hi! ") + "\n");
+            // Explicit Conversion (Bilinçli)
 
 
 
 
+            // float w = 10.3f;
 
+            // int v = (int)w;
 
+            // Console.WriteLine("v:"+v);
 
-            // PadLeft, PadRight
-            Console.WriteLine(var + var.PadLeft(30));  // var 25 karakter olduğu için araya 5 boşluk ekledi
-            Console.WriteLine(var.PadRight(35, 'x'));  // var 25 karakter olduğu için sağa 10 tane x ekledi
 
 
+            // int xx = 6;
 
+            // string yy = xx.ToString();
 
+            // Console.WriteLine("yy:"+yy);
 
 
+            // string zz = 12.5f.ToString();
 
+            // Console.WriteLine("zz:"+zz);
 
 
 
-            // Remove
-            Console.WriteLine(var.Remove(20)); // 20. indeksten sonrasını sildi
-            Console.WriteLine(var.Remove(0,5)); // 0. indeksten sonra 5 karakter sildi
 
 
 
@@ -119,19 +107,30 @@ namespace ptth
 
 
 
-            // Replace
-            Console.WriteLine(var.Replace("CSharp", "CPP"));
 
 
 
 
 
 
+            // Try Catch Finally
 
 
+            // try
+            // {
+            //     Console.WriteLine("Enter Number:");
+            //     int n1 = Convert.ToInt32(Console.ReadLine());
+            //     Console.WriteLine("Entered Number:"+n1);
 
-            // Split
-            Console.WriteLine(var.Split(' ')[1]);  // stringi ' ' karakterinden ayırıp diziye aktardı ['We', 'learn', ...]
+            // }
+            // catch(Exception ex)
+            // {
+            //     Console.WriteLine("Error: " + ex.Message.ToString());
+            // }
+            // finally
+            // {
+            //     Console.WriteLine("Done...");
+            // }
 
 
 
@@ -143,9 +142,280 @@ namespace ptth
 
 
 
-            // Substring
-            Console.WriteLine(var.Substring(4)); // 4. indeksten itibaren getir
-            Console.WriteLine(var.Substring(4,6)); // 4. indeksten itibaren 6 karakter getirir
+
+
+
+
+
+
+
+
+
+
+
+            // Ternary
+
+            // int time = DateTime.Now.Hour;
+
+            
+            // string res = time>=6 && time<11 ? "Morning" : time<=18 ? "Good Day" : "Nightyy";
+
+            // Console.WriteLine(res);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            // Switch Case
+
+
+            // int month = DateTime.Now.Month;
+
+
+
+            // switch (month)
+            // {
+            //     case 12:
+            //     case 1:
+            //     case 2:
+            //         Console.WriteLine("Winter");
+            //         break;
+
+
+            //     case 3:
+            //     case 4:
+            //     case 5:
+            //         Console.WriteLine("Spring");
+            //         break;
+
+
+            //     case 6:
+            //     case 7:
+            //     case 8:
+            //         Console.WriteLine("Summer");
+            //         break;
+
+
+            //     case 9:
+            //     case 10:
+            //     case 11:
+            //         Console.WriteLine("Fall");
+            //         break;
+
+
+            //     default:
+            //         break;                                                            
+            // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            // string s = new String('s', 3)  -> sss
+
+
+
+
+
+
+            // foreach
+
+
+            // string[] cars = {"BMW", "Ford", "Toyota", "Nissan"};
+
+
+            // foreach (var item in cars)
+            // {
+            //     Console.Write(item + " ");
+            // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            // Array
+
+
+            // string[] colors = new string[5];
+            // colors[0] = "Black";
+
+
+            // string[] pet = {"cat", "dog", "bird", "hamster"};
+
+            // int[] arr;
+            // arr = new int[3];
+            // arr[2] = 25;
+
+            // Console.WriteLine(colors[0] + "\n" + arr[1] + "\n" + pet[3]);
+
+
+
+
+
+
+
+
+
+
+            int[] nums = {4, 1, 7, 2, 12, 11, 12, 13, 20, 5};
+
+            Array.Sort(nums);
+
+            Console.WriteLine("Sorted Array");
+            foreach(var n in nums)
+            {
+                Console.Write(n + ",");
+            }
+
+
+
+
+            Console.WriteLine("\n\n");
+
+
+
+
+            Console.WriteLine("Cleared Array");
+
+            Array.Clear(nums, 2, 2);                 // ikinci indeksten itibaren iki elemanı sildi
+
+             foreach(var n in nums)
+            {
+                Console.Write(n + " ");
+            }
+
+
+
+
+            Console.WriteLine("\n\n");
+
+
+
+
+            Console.WriteLine("Reversed Array");
+
+            Array.Reverse(nums);
+
+             foreach(var n in nums)
+            {
+                Console.Write(n + " ");
+            }
+
+
+
+
+            Console.WriteLine("\n\n");
+
+
+
+
+            Console.WriteLine("Index Of Array");
+
+            int ix = Array.IndexOf(nums, 20);
+
+            Console.WriteLine("Index Of 20 is " + ix);
+
+
+
+
+            Console.WriteLine("\n\n");
+
+
+
+
+            Console.WriteLine("Resize");
+
+            Array.Resize<int>(ref nums, 9);
+
+              foreach(var n in nums)
+            {
+                Console.Write(n + " ");
+            }
+
+
+
+
+
+
+
+
+      
+            
+
+          
+        
+        
+        
+    
+           
+                
+
+
+
 
 
 
