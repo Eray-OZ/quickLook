@@ -1,13 +1,8 @@
 ﻿using System;
 
 
-
-
-namespace ptt
+namespace ptth
 {
-
-
-
 
 
 
@@ -26,65 +21,50 @@ namespace ptt
 
 
 
-        // Call By Reference
-        static int AddAndSum(ref int n1, ref int n2)
-        {
-            n1+=1;
-            n2+=1;
-
-            return n1+n2;
-        }
-        // Call By Reference
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         static void Main(string[] args)
         {
 
 
 
+            string var = "We learn CSharp, Welcome!";
+
+
+
+
+
+            // Length
+            Console.WriteLine(var.Length + "\n");
+
+
+            // ToUpper, ToLower
+            Console.WriteLine(var.ToUpper() + " " + var.ToLower() + "\n");
+
+
+
+
+
+            // Concat
+            Console.WriteLine(String.Concat(var, " Hello World") + "\n");
 
 
 
 
 
 
-            // Call By Reference
+            // Compare, CompareTo
+            Console.WriteLine(var.CompareTo("Hello World") + "\n");  // length var > length Hello World
 
-            int x = 4;
-            int y = 3;
-
-
-            int res = AddAndSum(ref x, ref y);
-
-            Console.WriteLine(res);
-            Console.WriteLine(x + " " + y );
-
-            // Call By Reference
+            Console.WriteLine(String.Compare(var, "Hello World", true) + "\n"); // true ise karşılaştırmada büyük küçük harf göz ardı edilir
 
 
 
 
+
+
+            // Contains
+            Console.WriteLine(var.Contains("CSharp"));
+            Console.WriteLine(var.EndsWith("qst"));
+            Console.WriteLine(var.StartsWith("We") + "\n");
 
 
 
@@ -92,7 +72,83 @@ namespace ptt
 
 
 
-           
+
+            // IndexOf
+            Console.WriteLine(var.IndexOf("CSharp"));   // Starts at 9
+            Console.WriteLine(var.LastIndexOf("p") + "\n"); // Last p at 14
+
+
+
+
+
+
+
+
+            // Insert
+            Console.WriteLine(var.Insert(0, "Hi! ") + "\n");
+
+
+
+
+
+
+
+            // PadLeft, PadRight
+            Console.WriteLine(var + var.PadLeft(30));  // var 25 karakter olduğu için araya 5 boşluk ekledi
+            Console.WriteLine(var.PadRight(35, 'x'));  // var 25 karakter olduğu için sağa 10 tane x ekledi
+
+
+
+
+
+
+
+
+
+
+            // Remove
+            Console.WriteLine(var.Remove(20)); // 20. indeksten sonrasını sildi
+            Console.WriteLine(var.Remove(0,5)); // 0. indeksten sonra 5 karakter sildi
+
+
+
+
+
+
+
+
+
+
+            // Replace
+            Console.WriteLine(var.Replace("CSharp", "CPP"));
+
+
+
+
+
+
+
+
+
+            // Split
+            Console.WriteLine(var.Split(' ')[1]);  // stringi ' ' karakterinden ayırıp diziye aktardı ['We', 'learn', ...]
+
+
+
+
+
+
+
+
+
+
+
+            // Substring
+            Console.WriteLine(var.Substring(4)); // 4. indeksten itibaren getir
+            Console.WriteLine(var.Substring(4,6)); // 4. indeksten itibaren 6 karakter getirir
+
+
+
         }
     }
 }
