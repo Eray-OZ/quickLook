@@ -1,2 +1,3 @@
 # C_Sharp_Notes
-## BASICS
+## String Methods
+## Datetime Math
